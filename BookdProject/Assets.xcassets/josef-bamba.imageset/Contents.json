@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "C4DF0068-D691-454E-AD0B-12B6D1BC19C6 - josefbamba.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
