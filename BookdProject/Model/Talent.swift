@@ -45,3 +45,21 @@ var speakers: [Talent] = [
     
     .init(title: "Jordan Belfort", description: "Jordan Ross Belfort er en amerikansk gründer, foredragsholder, forfatter og tidligere aksjemegler", price: "$24", imageName: "jordan-belfort"),
 ]
+
+
+//Search
+class TalentController : ObservableObject{
+    
+    let talents = [Talent(title: "$djs,$soloartister", description: "", price: "", imageName: "")]
+
+    @Published var publishedInfo = [Talent]()
+    
+    init(){
+        
+        publishedInfo = talents
+    }
+    
+    public func search(for key: String) {
+        publishedInfo = talents.filter {key.isEmpty ? true : $0.title.lowercased().contains(key.lowercased())}
+       }
+   }

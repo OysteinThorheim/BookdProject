@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var selectedOption: TopBarOptions = .soloartist
     @State private var currentOption: TopBarOptions = .soloartist
     var body: some View {
+        NavigationView{
         VStack{
             HStack(spacing:16){
                 Button {
@@ -28,12 +29,12 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button {
-                    
-                } label:{
+                NavigationLink(destination: SearchView()){
+                
                     Image(systemName: "magnifyingglass")
                         .font(.title2)
-                }
+                   
+               }
             }
             .padding(.horizontal)
             .foregroundColor(.black)
@@ -65,7 +66,9 @@ struct ContentView: View {
                 .coordinateSpace(name: "scroll")
             }
         }
+        .navigationBarHidden(true)
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
